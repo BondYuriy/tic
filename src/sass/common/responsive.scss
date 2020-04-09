@@ -1,0 +1,27 @@
+/* base */
+
+/* header */
+
+@media (min-width: 1200px) {
+  body.sticky-header {
+    .header-top-wrapper {
+      padding: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .header-main {
+      padding: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .black-theme {
+      background-color: rgba(29, 29, 29, 0.9);
+    }
+
+    .header-box {
+      height: 70px;
+    }
+  }
+}

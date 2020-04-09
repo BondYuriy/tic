@@ -1,0 +1,124 @@
+.footer-wrapper {
+  background-color: rgba(34, 34, 34, 0.03);
+  padding: 64px 0 26px 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  & .footer-main {
+    flex: 0 0 23%;
+
+    & .logo {
+      margin-bottom: 41px;
+    }
+
+    & .header-info {
+      margin-bottom: 50px;
+
+      & p {
+        color: #999999;
+
+        & strong {
+          color: $red-color;
+        }
+      }
+    }
+
+    & .social ul li a svg {
+      fill: #222222;
+    }
+  }
+
+  & .footer-info-block {
+    flex: 0 0 65%;
+
+    & .subscription-block {
+      height: 76px;
+      background: #db4f4f;
+      border: 5px solid #ffffff;
+      border-radius: 35px;
+      position: absolute;
+      width: 730px;
+      top: -84px;
+    }
+
+    & .footer-info {
+      display: flex;
+      justify-content: space-between;
+      margin: 54px 0 50px 0;
+
+      & .footer-nav-block {
+        flex: 0 0 55%;
+        display: flex;
+
+        & .footer-nav {
+          flex: 0 0 50%;
+
+          & .title {
+            font-family: $Roboto;
+            font-weight: $bold;
+            font-size: 14px;
+            line-height: 16px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+          }
+
+          & ul li {
+            margin-bottom: 5px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            & a {
+              color: #999999;
+              transition: 0.5s;
+
+              &:hover {
+                color: $black-text;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .copyright-block {
+      & ul {
+        display: flex;
+        justify-content: space-between;
+
+        & li {
+          display: flex;
+          align-items: center;
+
+          &:before {
+            display: inline-block;
+            content: '';
+            width: 1px;
+            height: 15px;
+            background-color: rgba(0, 0, 0, 0.4);
+            margin-right: 45px;
+          }
+
+          &:first-child::before {
+            display: none;
+          }
+
+          & a {
+            font-weight: $bold;
+            color: #999999;
+            transition: 0.5s;
+
+            &:hover {
+              color: $black-text;
+            }
+          }
+        }
+      }
+    }
+  }
+}
