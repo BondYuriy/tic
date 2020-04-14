@@ -25,3 +25,33 @@
     color: $white-text;
   }
 }
+
+.btn-transparent-small {
+  display: block;
+  height: 34px;
+  font-size: 13px;
+  color: $red-color;
+  line-height: 32px;
+  border: 1px solid $red-color;
+  border-radius: 20px;
+  padding: 0 20px;
+
+  &:hover {
+    background-color: $red-color;
+    color: $white-text;
+  }
+}
+
+.btn-red {
+  height: 42px;
+  background: #db4f4f;
+  border-radius: 20px;
+  padding: 0 60px;
+  line-height: 42px;
+  color: $white-text;
+
+  &:hover {
+    opacity: 0.8;
+    color: $white-text;
+  }
+}

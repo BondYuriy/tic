@@ -18,22 +18,22 @@ $(document).ready(function () {
 
   /* carousel */
 
-  // $('.home-carousel').owlCarousel({
-  //   animateOut: 'fadeOut',
-  //   animateIn: 'fadeIn',
-  //   smartSpeed: 1000,
-  //   loop: true,
-  //   margin: 0,
-  //   nav: false,
-  //   autoplay: true,
-  //   autoplayTimeout: 3000,
-  //   autoplayHoverPause: false,
-  //   responsive: {
-  //     0: {
-  //       items: 1,
-  //     },
-  //   },
-  // });
+  $('.home-carousel').owlCarousel({
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
+    smartSpeed: 1000,
+    loop: false,
+    margin: 0,
+    nav: true,
+    autoplay: false,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+    },
+  });
 
   // $('.portfolio-carousel').owlCarousel({
   //   animateOut: 'fadeOut',

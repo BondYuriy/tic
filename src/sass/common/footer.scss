@@ -36,13 +36,27 @@
     flex: 0 0 65%;
 
     & .subscription-block {
-      height: 76px;
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
       background: #db4f4f;
       border: 5px solid #ffffff;
       border-radius: 35px;
       position: absolute;
-      width: 730px;
       top: -84px;
+      padding: 22px 23px 22px 42px;
+
+      & .subscription-info {
+        flex: 0 0 30%;
+
+        & img {
+          position: absolute;
+        }
+      }
+
+      & .subscription-form {
+        flex: 0 0 65%;
+      }
     }
 
     & .footer-info {
