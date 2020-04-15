@@ -1,11 +1,19 @@
-.section-title {
-  margin: 0;
-  color: #242424;
-  font-size: 45px;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 22.5px;
-  position: relative;
-  z-index: 3;
+.section-title-block {
+  & .subtitle {
+    font-family: $Roboto;
+    font-weight: $bold;
+    font-size: 20px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: $text-color;
+  }
+
+  & .title {
+    font-family: $Roboto;
+    font-weight: $bold;
+    font-size: 40px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: $red-color;
+  }
 }

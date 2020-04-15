@@ -35,19 +35,16 @@ $(document).ready(function () {
     },
   });
 
-  // $('.portfolio-carousel').owlCarousel({
-  //   animateOut: 'fadeOut',
-  //   animateIn: 'fadeIn',
-  //   smartSpeed: 1000,
-  //   loop: true,
-  //   margin: 10,
-  //   nav: true,
-  //   responsive: {
-  //     0: {
-  //       items: 1,
-  //     },
-  //   },
-  // });
+  $('.new-carousel').owlCarousel({
+    loop: true,
+    margin: 29,
+    nav: true,
+    responsive: {
+      0: {
+        items: 3,
+      },
+    },
+  });
 
   $('.btn-toggle-mobile').click(function () {
     $('.portfolio-inside-list').toggleClass('show-list-text');
