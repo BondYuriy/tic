@@ -1,0 +1,107 @@
+.new-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 435px;
+  padding-bottom: 20px;
+
+  & .img-block {
+    display: block;
+    height: 209px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      display: block;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+  }
+
+  & .info-block {
+    flex-grow: 1;
+    position: relative;
+    padding: 20px 20px 0 20px;
+
+    & .sticker {
+      position: absolute;
+      top: -14px;
+    }
+
+    & .title {
+      margin-bottom: 10px;
+      line-height: 20px;
+
+      & a {
+        display: inline-block;
+        font-size: 15px;
+        color: $text-color;
+        position: relative;
+        padding-bottom: 3px;
+
+        &::after {
+          display: inline-block;
+          content: '';
+          width: 0;
+          height: 2px;
+          background-color: $red-color;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transition: 0.3s;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+
+    & p {
+      color: rgba(34, 34, 34, 0.5);
+      transition: 0.3s;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  & .new-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+    & .date {
+      display: flex;
+      align-items: center;
+      opacity: 0.2;
+      transition: 0.3s;
+
+      & img {
+        margin-right: 11px;
+      }
+    }
+  }
+
+  &:hover {
+    & .img-block img {
+      transform: scale(1.05);
+    }
+
+    & .info-block {
+      & p {
+        color: rgba(34, 34, 34, 0.7);
+      }
+    }
+
+    & .new-card-footer .date {
+      opacity: 0.5;
+    }
+  }
+}

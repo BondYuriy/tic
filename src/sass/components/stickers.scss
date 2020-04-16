@@ -1,0 +1,38 @@
+.sticker {
+  display: inline-flex;
+  min-width: 97px;
+  height: 30px;
+  background-color: $white;
+  box-shadow: 0px 4px 10px rgba(66, 78, 79, 0.15);
+  border-radius: 15px;
+  padding: 0 10px;
+
+  & .sticker-img-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6px;
+  }
+
+  & span {
+    font-family: $Roboto;
+    font-weight: $bold;
+    font-size: 10px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: rgba(34, 34, 34, 0.5);
+    transition: 0.5s;
+  }
+
+  &:hover span {
+    color: rgba(34, 34, 34, 1);
+  }
+}
+
+.sticker-news {
+  & .sticker-img-block img {
+    display: block;
+    width: 10px;
+    height: 10px;
+  }
+}

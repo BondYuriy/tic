@@ -1,4 +1,5 @@
-.new-carousel {
+.new-carousel,
+.customers-carousel {
   padding-top: 46px;
 
   .owl-nav {
@@ -6,19 +7,28 @@
     align-items: center;
     position: absolute;
     top: 25px;
-    right: 0;
+    right: 3px;
     z-index: 2;
 
     & .owl-prev,
     .owl-next {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       background-color: $white !important;
       box-shadow: 0px 4px 10px rgba(66, 78, 79, 0.15);
       display: flex;
       justify-content: center;
       align-items: center;
+      border: 1px solid $white;
+
+      &:hover {
+        border: 1px solid rgba(153, 153, 153, 0.17);
+      }
+
+      &:active {
+        box-shadow: none;
+      }
 
       & span {
         display: none;
@@ -36,17 +46,45 @@
       margin-right: 11px;
 
       &::before {
-        display: block;
-        content: '';
-        width: 9px;
-        height: 14px;
-        background-image: url('../../images/prev.svg');
+        background-image: url('../images/prev.svg');
         margin-right: 2px;
+      }
+    }
+
+    & .owl-next {
+      &::before {
+        background-image: url('../images/next.svg');
+        margin-left: 2px;
       }
     }
   }
 
   & .owl-dots {
     display: none;
+  }
+}
+
+.customers-carousel {
+  & .owl-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 17px;
+
+    & .owl-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(34, 34, 34, 0.5);
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    & .active {
+      background-color: $red-color;
+    }
   }
 }

@@ -46,6 +46,22 @@ $(document).ready(function () {
     },
   });
 
+  $('.customers-carousel').owlCarousel({
+    loop: true,
+    margin: 13,
+    nav: true,
+    autoplay: false,
+    autoplayTimeout: 3000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      700: {
+        items: 3,
+      },
+    },
+  });
+
   $('.btn-toggle-mobile').click(function () {
     $('.portfolio-inside-list').toggleClass('show-list-text');
   });
