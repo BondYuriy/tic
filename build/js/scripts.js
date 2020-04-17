@@ -41,6 +41,12 @@ $(document).ready(function () {
     nav: true,
     responsive: {
       0: {
+        items: 1,
+      },
+      768: {
+        items: 2,
+      },
+      1200: {
         items: 3,
       },
     },
@@ -54,9 +60,9 @@ $(document).ready(function () {
     autoplayTimeout: 3000,
     responsive: {
       0: {
-        items: 1,
+        items: 2,
       },
-      700: {
+      992: {
         items: 3,
       },
     },

@@ -1,0 +1,138 @@
+.category-nav-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: -27px;
+  position: relative;
+  z-index: 3;
+  padding-bottom: 114px;
+
+  & .category-nav-item {
+    flex: 0 0 23%;
+    height: 355px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    & .category-card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      box-shadow: 0px 10px 15px rgba(149, 168, 171, 0.14);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: 0.2s;
+      position: absolute;
+      padding: 43px 23px 23px 23px;
+
+      & .category-card-img {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background-color: $red-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:before {
+          display: block;
+          content: '';
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          background-color: $red-color;
+          opacity: 0.1;
+          position: absolute;
+          transition: 0.5s;
+        }
+      }
+
+      & .title {
+        margin-bottom: 49px;
+        position: relative;
+        z-index: 2;
+
+        & a {
+          display: block;
+          height: 38px;
+          font-family: $Roboto;
+          font-weight: $bold;
+          font-size: 12px;
+          line-height: 19px;
+          text-transform: uppercase;
+          color: #1f1f1f;
+          padding-left: 75px;
+        }
+
+        &:after {
+          display: block;
+          content: '';
+          width: 0;
+          height: 2px;
+          background-color: $red-color;
+          transition: 0.3s;
+        }
+      }
+
+      & ul {
+        flex-grow: 1;
+        margin-bottom: 21px;
+        position: relative;
+        z-index: 2;
+
+        & li {
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+
+          &:before {
+            display: block;
+            content: '';
+            flex: 0 0 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: $red-color;
+            opacity: 0.2;
+            margin-right: 10px;
+            transition: 0.3s;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          & a {
+            font-family: $Roboto;
+            font-weight: $Regular;
+            font-size: 13px;
+            line-height: 19px;
+            color: #858585;
+            transition: 0.3s;
+          }
+        }
+      }
+
+      & .btn {
+        position: relative;
+        z-index: 2;
+        transition: 0.3s;
+        margin-right: auto;
+      }
+    }
+  }
+
+  & .icon-download .category-card ul li:before {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    display: block;
+    content: '';
+    flex: 0 0 13px;
+    height: 17px;
+    opacity: 0.5;
+    margin-right: 10px;
+    transition: 0.3s;
+    background-image: url('../images/download.svg');
+  }
+}

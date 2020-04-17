@@ -43,14 +43,17 @@
 
           & .title {
             width: 53%;
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: 300;
-            font-size: 35px;
-            line-height: 45px;
-            text-transform: uppercase;
-            color: $white-text;
             margin-bottom: 35px;
+            line-height: 45px;
+
+            & a {
+              font-family: $Roboto;
+              font-weight: 300;
+              font-size: 35px;
+              line-height: 45px;
+              text-transform: uppercase;
+              color: $white-text;
+            }
           }
         }
       }
