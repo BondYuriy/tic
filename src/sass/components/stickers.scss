@@ -36,3 +36,25 @@
     height: 10px;
   }
 }
+
+.sticker-industry {
+  padding: 3px 10px 3px 3px;
+
+  .sticker-img-block {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: $red-color;
+
+    & img {
+      display: block;
+      width: 12px;
+      height: 12px;
+      object-fit: cover;
+    }
+  }
+
+  & span {
+    line-height: 26px;
+  }
+}
