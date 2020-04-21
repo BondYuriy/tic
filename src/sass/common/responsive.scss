@@ -733,3 +733,30 @@
     margin-bottom: 32px;
   }
 }
+
+/* .section-title-block */
+
+@media (min-width: 1200px) {
+  .inner-category-block .inner-category-card {
+    & ul li {
+      &:hover {
+        &:before {
+          opacity: 1;
+        }
+
+        & a {
+          color: #1f1f1f;
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 10px 15px rgba(149, 168, 171, 0.3);
+
+      & .category-card-img:before {
+        width: 2300px;
+        height: 800px;
+      }
+    }
+  }
+}
