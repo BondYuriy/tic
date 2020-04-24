@@ -107,4 +107,16 @@ body.sticky-header {
 .navMain {
   height: 64px;
   background-color: $red-color;
+
+  & .contact-link {
+    display: block;
+    font-family: $Roboto;
+    font-weight: $bold;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white-text;
+    text-align: right;
+    line-height: 64px;
+  }
 }

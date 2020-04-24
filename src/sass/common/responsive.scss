@@ -734,6 +734,47 @@
   }
 }
 
+/* contact page */
+
+@media (min-width: 1200px) {
+  .contact-block {
+    & .category-nav-block .category-nav-item {
+      &:hover {
+        & .category-card {
+          padding: 50px 26px 28px 29px;
+
+          & .category-card-img:before {
+            width: 1000px;
+            height: 1000px;
+          }
+        }
+      }
+
+      & .category-card {
+        & .title {
+          &:hover {
+            &:after {
+              display: none;
+            }
+          }
+        }
+
+        & ul li {
+          &:hover {
+            &:before {
+              opacity: 1;
+            }
+
+            & a {
+              color: #1f1f1f;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* inner page */
 
 @media (min-width: 1200px) {

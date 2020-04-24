@@ -1,0 +1,126 @@
+.map {
+  width: 100vw;
+  height: 525px;
+  margin-top: -50px;
+
+  & iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contact-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  & .category-nav-block {
+    flex: 0 0 31%;
+    padding: 0;
+
+    & .category-nav-item {
+      flex: 0 0 100%;
+      height: 342px;
+
+      & .category-card {
+        padding: 53px 23px 23px 23px;
+
+        & .title {
+          font-family: $Roboto;
+          font-weight: $bold;
+          font-size: 17px;
+          line-height: 19px;
+          text-transform: uppercase;
+          color: #1f1f1f;
+          padding-left: 100px;
+          margin-bottom: 41px;
+
+          &:after {
+            display: none;
+          }
+        }
+
+        & ul {
+          & li {
+            & .comtact-item {
+              display: block;
+
+              & .comtact-name {
+                display: block;
+                font-family: $Roboto;
+                font-size: 13px;
+                line-height: 19px;
+                color: #999999;
+
+                & span {
+                  color: #222222;
+                  opacity: 1;
+                }
+              }
+            }
+
+            a {
+              color: #222222;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & form {
+    padding-top: 25px;
+    flex: 0 0 66%;
+    display: flex;
+    flex-wrap: wrap;
+
+    & .title {
+      flex: 0 0 100%;
+      font-family: $Roboto;
+      font-weight: $bold;
+      font-size: 17px;
+      line-height: 19px;
+      text-transform: uppercase;
+      color: #1f1f1f;
+      margin-bottom: 19px;
+    }
+
+    & input[type='text'],
+    input[type='email'] {
+      height: 42px;
+      flex: 0 0 48%;
+    }
+
+    & input[type='text'] {
+      margin-right: 4%;
+    }
+
+    & textarea {
+      flex: 0 0 100%;
+      margin: 27px 0 29px 0;
+      resize: none;
+    }
+
+    & input[type='text'],
+    input[type='email'],
+    textarea {
+      border: 1px solid rgba(219, 79, 79, 0.5);
+      border-radius: 20px;
+      line-height: 40px;
+      padding: 0 20px;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        border: 1px solid rgba(219, 79, 79, 1);
+      }
+    }
+
+    & .btn {
+      flex: 0 0 190px;
+    }
+  }
+}
