@@ -105,10 +105,18 @@ body.sticky-header {
 }
 
 .navMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 64px;
   background-color: $red-color;
 
+  & .menu-container {
+    flex: 0 0 1000px;
+  }
+
   & .contact-link {
+    flex: 0 0 90px;
     display: block;
     font-family: $Roboto;
     font-weight: $bold;
