@@ -77,16 +77,20 @@ $(document).ready(function () {
   $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
   $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
   $('.menu > ul').before(
-    '<a href="#" class="menu-mobile open">&nbsp;</a><a href="#" class="menu-mobile close">&nbsp;</a>',
+    '<a href="#" class="menu-mobile open"></a><a href="#" class="menu-mobile close">✕</a>',
   );
   $('.menu > ul > li').hover(function (e) {
-    if ($(window).width() > 943) {
-      $(this).children('ul').stop(true, false).fadeToggle(150);
+    if ($(window).width() > 992) {
+      $(this)
+        .children('ul')
+        .stop(true, false)
+        .fadeToggle(150)
+        .css('display', 'flex');
       e.preventDefault();
     }
   });
   $('.menu > ul > li').click(function () {
-    if ($(window).width() <= 943) {
+    if ($(window).width() <= 991) {
       $(this).children('ul').fadeToggle(150);
     }
   });

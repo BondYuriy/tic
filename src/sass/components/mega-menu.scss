@@ -2,217 +2,151 @@
   width: 100%;
 }
 
-.menu-container {
-}
-
-.menu img {
-  max-width: 100%;
-}
-
-.menu-mobile {
-  display: none;
-  background-color: blueviolet;
-  width: 30px;
-  height: 30px;
-}
-
-.menu-dropdown-icon:before {
-  content: '\f489';
-  font-family: 'Ionicons';
-  display: none;
-  cursor: pointer;
-  float: right;
-  padding: 1.5em 2em;
-  background: #fff;
-  color: #333;
-}
-
 .menu > ul {
-  margin: 0 auto;
-  width: 80%;
+  width: 100%;
   list-style: none;
   padding: 0;
   position: relative;
   box-sizing: border-box;
-  clear: right;
-}
-
-.menu > ul:before,
-.menu > ul:after {
-  content: '';
-  display: table;
-}
-
-.menu > ul:after {
-  clear: both;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .menu > ul > li {
-  float: left;
   padding: 0;
   margin: 0;
 }
 
-.menu > ul > li a {
+.menu > ul > li > a {
   text-decoration: none;
   padding: 1.5em 3em;
   display: block;
+  font-family: $Roboto;
+  font-weight: $bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white-text;
+  position: relative;
 }
+
+.menu > ul > li > a::after {
+  display: block;
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
 .menu > ul > li:hover {
-  background: $red-color;
+  background-color: $red-color;
 }
 
 .menu > ul > li > ul {
   display: none;
   width: 100%;
-  background: $red-color;
+  background-color: $red-color;
   padding: 20px;
   position: absolute;
-  z-index: 99;
+  z-index: 10;
   left: 0;
   margin: 0;
   list-style: none;
   box-sizing: border-box;
 }
-.menu > ul > li > ul:before,
-.menu > ul > li > ul:after {
-  content: '';
-  display: table;
-}
-.menu > ul > li > ul:after {
-  clear: both;
-}
+
 .menu > ul > li > ul > li {
+  flex: 1 1 auto;
+  display: block;
   margin: 0;
   padding-bottom: 0;
   list-style: none;
-  width: 25%;
-  background: none;
-  float: left;
+  background-color: none;
+  margin-right: 30px;
 }
-.menu > ul > li > ul > li a {
-  color: #777;
+
+.menu > ul > li > ul > li > a {
+  color: $white-text;
   padding: 0.2em 0;
-  width: 95%;
   display: block;
-  border-bottom: 1px solid #ccc;
+  width: 100%;
+  font-size: 14px;
+  font-weight: $bold;
+  border-bottom: 1px solid $white-text;
+  transition: 0.3s;
+  box-sizing: border-box;
 }
-.menu > ul > li > ul > li a:hover {
-  color: #03a9f4;
+
+.menu > ul > li > ul > li > a:hover {
+  color: $white-text;
+  opacity: 0.7;
+  padding-left: 10px;
 }
+
 .menu > ul > li > ul > li > ul {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 0;
   margin: 10px 0 0;
   list-style: none;
   box-sizing: border-box;
 }
-.menu > ul > li > ul > li > ul:before,
-.menu > ul > li > ul > li > ul:after {
-  content: '';
-  display: table;
-}
-.menu > ul > li > ul > li > ul:after {
-  clear: both;
-}
+
 .menu > ul > li > ul > li > ul > li {
-  float: left;
+  display: block;
   width: 100%;
   padding: 10px 0;
   margin: 0;
   font-size: 0.8em;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-.menu > ul > li > ul > li > ul > li a {
+
+.menu > ul > li > ul > li > ul > li > a {
+  display: block;
   border: 0;
   font-size: 14px;
+  color: $white-text;
+  transition: 0.3s;
+  box-sizing: border-box;
 }
+
+.menu > ul > li > ul > li > ul > li > a:hover {
+  color: $white-text;
+  opacity: 0.7;
+  position: relative;
+  transform: translate(10px, 0);
+}
+
 .menu > ul > li > ul.normal-sub {
+  flex-wrap: wrap;
   width: 300px;
   left: auto;
   padding: 10px 20px;
 }
+
 .menu > ul > li > ul.normal-sub > li {
-  width: 100%;
+  flex: 0 0 100%;
 }
+
 .menu > ul > li > ul.normal-sub > li a {
   border: 0;
   padding: 1em 0;
+  transition: 0.3s;
 }
 
-/* ––––––––––––––––––––––––––––––––––––––––––––––––––
-Mobile style's
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media only screen and (max-width: 959px) {
-  .menu-container .menu {
-    display: inline-block;
-  }
+.menu > ul > li > ul.normal-sub > li a:hover {
+  opacity: 0.7;
+  padding-left: 10px;
+}
 
-  .menu-mobile {
-    display: block;
-  }
-
-  .menu-mobile.close {
-    display: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 5;
-  }
-
-  .menu-mobile.close.showBtn {
-    display: block;
-  }
-
-  .menu-dropdown-icon:before {
-    display: block;
-    background-color: chartreuse;
-  }
-
-  .menu > ul {
-    display: none;
-    background-color: #fff;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    overflow-y: scroll;
-    padding-top: 50px;
-  }
-  .menu > ul > li {
-    width: 100%;
-    float: none;
-    display: block;
-  }
-  .menu > ul > li a {
-    padding: 1.5em;
-    width: 100%;
-    display: block;
-  }
-  .menu > ul > li > ul {
-    position: relative;
-    padding: 0 40px;
-  }
-  .menu > ul > li > ul.normal-sub {
-    width: 100%;
-  }
-  .menu > ul > li > ul > li {
-    float: none;
-    width: 100%;
-    margin-top: 20px;
-  }
-  .menu > ul > li > ul > li:first-child {
-    margin: 0;
-  }
-  .menu > ul > li > ul > li > ul {
-    position: relative;
-  }
-  .menu > ul > li > ul > li > ul > li {
-    float: none;
-  }
-  .menu .show-on-mobile {
-    display: block;
-  }
+.menu-mobile {
+  display: none;
 }
