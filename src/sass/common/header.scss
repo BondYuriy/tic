@@ -116,6 +116,16 @@ body.sticky-header {
     align-items: center;
   }
 
+  & .menu-text-mobile {
+    display: none;
+    font-family: $Roboto;
+    line-height: 16px;
+    text-align: right;
+    text-transform: uppercase;
+    color: $white-text;
+    opacity: 0.5;
+  }
+
   & .contact-link {
     flex: 0 0 90px;
     display: block;
